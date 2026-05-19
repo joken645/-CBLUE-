@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/
+.venv/
+venv/
+
+# Large local data and model artifacts. Keep the scripts and generated reports in git.
+CBLUEDatasets/
+data/model_data/
+data/output/
+data/result_output/
+*.bin
+*.safetensors
+*.h5
+*.msgpack
+

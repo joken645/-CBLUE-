@@ -1,0 +1,25 @@
+{
+  "hypothesis": "chinese-bert-wwm-ext 的多次验证 F1 高于规则/词典基线",
+  "scores": {
+    "chinese-bert-wwm-ext": [
+      0.842,
+      0.851,
+      0.858,
+      0.847,
+      0.861
+    ],
+    "rule_dictionary_baseline": [
+      0.684,
+      0.693,
+      0.701,
+      0.688,
+      0.697
+    ]
+  },
+  "mann_whitney_u": {
+    "u_statistic": 25.0,
+    "p_value": 0.007937,
+    "significant_at_0.05": "yes",
+    "method": "scipy.stats.mannwhitneyu"
+  }
+}

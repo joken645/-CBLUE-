@@ -1,0 +1,129 @@
+{
+  "datasets": [
+    {
+      "file": "CMeEE-V2_train_基础清洗.json",
+      "samples": 15000,
+      "avg_text_len": 54.15,
+      "max_text_len": 4870
+    },
+    {
+      "file": "CMeEE-V2_dev_基础清洗.json",
+      "samples": 5000,
+      "avg_text_len": 54.08,
+      "max_text_len": 2078
+    },
+    {
+      "file": "CMeIE-V2_train_基础清洗.json",
+      "samples": 14339,
+      "avg_text_len": 85.66,
+      "max_text_len": 300
+    },
+    {
+      "file": "CMeIE-V2_dev_基础清洗.json",
+      "samples": 3585,
+      "avg_text_len": 83.91,
+      "max_text_len": 300
+    },
+    {
+      "file": "KUAKE-QIC_train_基础清洗.json",
+      "samples": 6931,
+      "avg_text_len": 13.78,
+      "max_text_len": 482
+    },
+    {
+      "file": "KUAKE-QIC_dev_基础清洗.json",
+      "samples": 1955,
+      "avg_text_len": 16.16,
+      "max_text_len": 216
+    }
+  ],
+  "cmeee_top_entity_types": [
+    [
+      "bod",
+      24106
+    ],
+    [
+      "dis",
+      19371
+    ],
+    [
+      "sym",
+      17118
+    ],
+    [
+      "pro",
+      9688
+    ],
+    [
+      "ite",
+      4410
+    ],
+    [
+      "dru",
+      4379
+    ],
+    [
+      "mic",
+      2343
+    ],
+    [
+      "equ",
+      889
+    ],
+    [
+      "dep",
+      345
+    ]
+  ],
+  "cmeie_top_predicates": [
+    [
+      "临床表现",
+      16354
+    ],
+    [
+      "相关（导致）",
+      6961
+    ],
+    [
+      "药物治疗",
+      5755
+    ],
+    [
+      "同义词",
+      4848
+    ],
+    [
+      "病理分型",
+      4304
+    ],
+    [
+      "病因",
+      3449
+    ],
+    [
+      "辅助治疗",
+      2085
+    ],
+    [
+      "并发症",
+      2030
+    ],
+    [
+      "实验室检查",
+      2029
+    ],
+    [
+      "发病部位",
+      1852
+    ],
+    [
+      "影像学检查",
+      1645
+    ],
+    [
+      "鉴别诊断",
+      1614
+    ]
+  ],
+  "qic_best_dev_accuracy_from_log": 0.8163682864450128
+}

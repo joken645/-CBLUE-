@@ -1,0 +1,15 @@
+name: cblue-report
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.11
+  - pandas
+  - scipy
+  - scikit-learn
+  - streamlit
+  - pip
+  - pip:
+      - transformers>=4.40
+      - torch>=2.0
+

@@ -1,0 +1,20 @@
+{
+  "cmeee_dictionary_baseline": {
+    "precision": 0.2402,
+    "recall": 0.4299,
+    "f1": 0.3082,
+    "tp": 2570,
+    "fp": 8128,
+    "fn": 3408,
+    "task": "CMeEE-V2 entity extraction",
+    "method": "dictionary baseline, min_count=2",
+    "samples": 1200,
+    "dictionary_terms": 7577
+  },
+  "qic_chinese_bert_wwm_ext": {
+    "task": "KUAKE-QIC query intent classification",
+    "model": "chinese-bert-wwm-ext",
+    "best_dev_accuracy": 0.8163682864450128,
+    "source": "data\\output\\qic\\chinese-bert-wwm-ext\\qic_chinese-bert-wwm-ext.log"
+  }
+}
