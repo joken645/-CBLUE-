@@ -89,7 +89,7 @@ st.markdown(
     """
     <div class="hero">
         <h1>CBLUE 中文生物医学文本理解实验平台</h1>
-        <p>围绕开题报告中的 CMeEE、CMeIE、chinese-bert-wwm-ext、Mann-Whitney U 检验和 Neo4j 知识图谱导出，提供可复现实验摘要与在线演示。</p>
+        <p>这里放的是 CMeEE、CMeIE、KUAKE-QIC 的实验结果，还有一个简单的分诊示例。</p>
     </div>
     """,
     unsafe_allow_html=True,

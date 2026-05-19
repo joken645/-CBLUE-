@@ -10,4 +10,4 @@
 | Demo | Streamlit 页面展示实验摘要、三元组和分诊示例 | 已实现 |
 | 仓库交付 | README、依赖文件、忽略大文件 | 已实现 |
 
-建议答辩时重点展示 `data/generated/summary.md`、Streamlit 页面和 Neo4j 导入效果。
+答辩时可以先展示 `data/generated/summary.md`、Streamlit 页面和 Neo4j 导入结果。
