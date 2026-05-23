@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .streamlit/
+.idea/
 .venv/
 venv/
 
@@ -14,4 +15,3 @@ data/result_output/
 *.safetensors
 *.h5
 *.msgpack
-

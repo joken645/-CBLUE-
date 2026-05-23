@@ -1,0 +1,4 @@
+data/generated/*.cypher linguist-generated=true
+data/generated/*.csv linguist-generated=true
+data/generated/*.json linguist-generated=true
+notebooks/*.ipynb linguist-documentation=true

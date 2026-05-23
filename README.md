@@ -54,6 +54,7 @@ flowchart LR
 - 方法：训练集高频实体的词典匹配
 - 指标：Precision、Recall、F1
 - 当前结果：`F1 = 0.3082`
+- 深度学习入口：`scripts/train_cmeee_bert.py`
 
 ### 2. KUAKE-QIC 文本分类
 
@@ -80,6 +81,7 @@ flowchart LR
 - 核心代码：`cblue_project/`
 - 可视化 Demo：`ui/triage_simple_app.py`
 - 报告生成脚本：`scripts/build_artifacts.py`
+- CMeEE BERT 训练脚本：`scripts/train_cmeee_bert.py`
 - 结果产物：`data/generated/`
 - 说明文档：`README.md`、`docs/opening_report_mapping.md`
 - 依赖文件：`requirements.txt`、`environment.yaml`
@@ -91,6 +93,7 @@ flowchart LR
 
 - 读取本地 CBLUE 数据集并生成统计摘要
 - 从 CMeEE 构造词典基线并计算 F1
+- 补充了 CMeEE 的 BERT token classification 训练入口
 - 从 KUAKE-QIC 日志提取最佳开发集准确率
 - 对多次实验分数执行 Mann-Whitney U 检验
 - 从 CMeIE 抽取三元组并导出 Neo4j 导入脚本
@@ -104,6 +107,19 @@ flowchart LR
 pip install -r requirements.txt
 ```
 
+### 数据准备
+
+仓库没有提交原始 CBLUE 数据和预训练模型。运行前需要在本地准备：
+
+```text
+CBLUEDatasets/
+├─ CMeEE-V2/
+├─ CMeIE-V2/
+└─ KUAKE-QIC/
+
+data/model_data/chinese-bert-wwm-ext/
+```
+
 ### 生成实验产物
 
 ```powershell
@@ -114,6 +130,20 @@ python scripts/build_artifacts.py
 
 ```powershell
 streamlit run ui/triage_simple_app.py
+```
+
+### 训练 CMeEE BERT 基线
+
+完整训练：
+
+```powershell
+python scripts/train_cmeee_bert.py
+```
+
+快速检查脚本是否能跑通：
+
+```powershell
+python scripts/train_cmeee_bert.py --train-limit 64 --dev-limit 32 --epochs 1
 ```
 
 运行后会生成：
@@ -153,11 +183,15 @@ streamlit run ui/triage_simple_app.py
 | --- | --- |
 | 使用 CBLUE 数据集 | 读取本地 `CBLUEDatasets` 中 CMeEE、CMeIE、KUAKE-QIC |
 | 采用 chinese-bert-wwm-ext | 读取本地训练日志中的最佳开发集准确率，保留模型路径约定 |
-| 计算 F1 等指标 | `cblue_project/evaluation.py` 提供 CMeEE 微平均 Precision/Recall/F1 |
+| 计算 F1 等指标 | `cblue_project/evaluation.py` 提供 CMeEE 词典基线指标，`scripts/train_cmeee_bert.py` 提供 BERT 训练入口 |
 | Mann-Whitney U 检验 | `cblue_project/stats.py` 输出 U 值、p 值与显著性 |
 | Neo4j 知识图谱 | `cblue_project/kg.py` 导出 CSV 与 Cypher |
 | Demo 展示 | `ui/triage_simple_app.py` 展示指标、图谱样例和智能分诊 |
 | GitHub 仓库材料 | README、requirements、environment、.gitignore 已补齐 |
+
+## GitHub 语言识别
+
+`data/generated/neo4j_import.cypher` 是生成产物，文件比较大。仓库用 `.gitattributes` 将生成的 Cypher、CSV、JSON 标记为 generated，避免 GitHub 把仓库主语言误判为 Cypher。
 
 ## Neo4j 导入
 
