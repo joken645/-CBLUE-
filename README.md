@@ -206,3 +206,10 @@ python scripts/build_artifacts.py
 ## 说明
 
 本仓库默认不提交 `CBLUEDatasets`、预训练模型和训练输出，因为这些文件较大，且部分文件超过 GitHub 普通仓库限制。若需要复现实验，请将数据和模型按上面的目录结构放回本地。
+
+## 终期材料
+
+- [结题报告](reports/CBLUE_结题报告.docx)
+- [汇报 PPT](reports/CBLUE_终期汇报.pptx)
+- [复现说明](docs/reproducibility.md)
+- [单元测试](tests/test_core.py)
